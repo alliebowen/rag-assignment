@@ -1,0 +1,13 @@
+{
+    "name": "LLMAssigment2",
+    "dockerComposeFile": "../docker-compose.yml",
+    "service": "anaconda",
+    "workspaceFolder": "/code",
+    "shutdownAction": "stopCompose",
+    
+    "customizations": {
+        "vscode": {
+          "extensions": ["donjayamanne.python-extension-pack", "ms-toolsai.jupyter"]
+        }
+    }
+}
