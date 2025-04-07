@@ -1,4 +1,4 @@
-from embeddings import EMBEDDINGS
+from src.embeddings import EMBEDDINGS
 from langchain_milvus import Milvus
 
 from pymilvus import Collection, MilvusException, connections, db, utility
