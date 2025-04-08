@@ -5,8 +5,8 @@ from langchain_core.prompts import PromptTemplate
 from langchain_core.tools import tool
 from langgraph.prebuilt import create_react_agent
 from langgraph.graph import StateGraph
-from langgraph.graph.message import START
-from langgraph.checkpoint import InMemorySaver
+from langgraph.graph import START
+from langgraph.checkpoint.memory import InMemorySaver
 
 
 PROMPT = PromptTemplate.from_template(
@@ -20,6 +20,7 @@ class State(dict):
 
 @tool
 def retrieve(q: str):
+    '''Retrieve information related to query'''
     docs = VECTOR_STORE.similarity_search(q, k=5)
     return "\n\n".join([f"## Source: {doc.metadata['source']}\n{doc.page_content}" for doc in docs])
 
