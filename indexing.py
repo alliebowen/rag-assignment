@@ -11,13 +11,13 @@ pdf_docs = [PyPDFLoader(file).load()[0] for file in pdf_files]
 print(f"✅ Loaded {len(pdf_docs)} PDF docs")
 
 # === Load web URLs ===
-#URL_FILE = "data/web_urls.txt"
-#web_urls = open(URL_FILE).readlines()
-#web_urls = [url.strip() for url in web_urls if url.strip()]
-#web_docs = WebBaseLoader(web_paths=web_urls).load()
-#print(f"✅ Loaded {len(web_docs)} web docs")
+URL_FILE = "data/web_urls.txt"
+web_urls = open(URL_FILE).readlines()
+web_urls = [url.strip() for url in web_urls if url.strip()]
+web_docs = WebBaseLoader(web_paths=web_urls).load()
+print(f"✅ Loaded {len(web_docs)} web docs")
 
-web_docs = []
+#web_docs = []
 
 # === Load preprocessed .txt files ===
 text_docs = []
